@@ -1,0 +1,62 @@
+.wrapper {
+    width: 420px;
+    background-color: #fff;
+    color: #fff;
+    border: 5px solid #760000;
+    border-radius: 10px;
+    margin-top: 50px;
+    padding: 30px 40px;
+}
+
+.wrapper a {
+    color: purple;
+}
+
+.wrapper h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 36px;
+    color: black;
+    text-align: center;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    border: 3px solid #760000;
+    border-radius: 40px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #000;
+}
+
+.wrapper .submit-btn {
+    width: 100%;
+    height: 45px;
+    background-color: #333;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.input-box i {
+    position: absolute;
+    color: #333;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}

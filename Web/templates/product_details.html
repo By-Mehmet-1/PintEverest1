@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ product.name }} - Detay</title>
+</head>
+<body>
+
+    <h1>{{ product.name }}</h1>
+    <img src="{{ url_for('static', filename=product.image) }}" alt="{{ product.name }}" style="width:400px;">
+    <p>Açıklama: {{ product.description }}</p>
+
+    <h2>Yorumlar</h2>
+    <ul>
+        {% for comment in comments %}
+            <li>{{ comment.username }}: {{ comment.text }}</li>
+        {% else %}
+            <li>Henüz yorum yok.</li>
+        {% endfor %}
+    </ul>
+
+    {% if session.get('username') %}
+    <form method="POST" action="{{ url_for('add_comment', product_id=product.id) }}">
+        <textarea name="comment" required></textarea><br>
+        <button type="submit">Yorum Yap</button>
+    </form>
+    {% else %}
+    <p>Yorum yapmak için <a href="{{ url_for('login') }}">giriş yap</a>malısın.</p>
+    {% endif %}
+
+</body>
+</html>

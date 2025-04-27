@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Profil</title>
+</head>
+<body>
+    <h1>Profil Sayfası</h1>
+    <a href="{{ url_for('urun_ekle') }}">Ürün Ekle</a>
+    <h2>Ürünlerim:</h2>
+    <ul>
+    {% for product in user_products %}
+        <li>{{ product.name }} - {{ product.price }} TL</li>
+    {% endfor %}
+    </ul>
+    <a href="{{ url_for('home') }}">Anasayfaya dön</a>
+</body>
+</html>
